@@ -8,9 +8,7 @@ tasks = page_model.Tasks()
 class TestTasks():
 
     def test_create_tasks(self):
-        login.input_email_address("garrynilson@mailinator.com")
-        login.input_password("ZXasqw12")
-        login.click_login_button()
+        login.login_as_mentee(name="garrynilson@mailinator.com", password="ZXasqw12")
         dashboard.verify_information_pop_up()
         dashboard.verify_release_notes_pop_up()
         dashboard.verify_mentee_dashboard()

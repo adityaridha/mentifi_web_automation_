@@ -7,12 +7,11 @@ screen_capture = ScreenCapture()
 
 @pytest.fixture(autouse=True)
 def setup_teardown_test_cases():
-
     print("\n#################### set up test case session")
     yield
     print("\n#################### tear down test case session")
     # whether test is success or failed this code will still executed
-    driver.get("https://test-z5y5zwrh0g.hub3c.com/Account/SignOut")
+    # driver.get("https://test-z5y5zwrh0g.hub3c.com/Account/SignOut")
 
 @pytest.fixture(scope='session', autouse=True)
 def teardown_session():

@@ -13,6 +13,8 @@ class TestLogin():
         login.input_email_address("bezita@mailinator.com")
         login.input_password("ZXasqw12")
         login.click_login_button()
+
+
         dashboard.verify_information_pop_up()
         dashboard.verify_release_notes_pop_up()
         dashboard.verify_mentee_dashboard()

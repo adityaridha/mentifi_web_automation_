@@ -3,6 +3,8 @@ from selenium import webdriver
 class Connection(object):
 
         LOGIN_URL = "https://test-edu-tvc49e7wfo.hub3c.com/"
+
+        ''' Chrome browser profile '''
         OPTIONS = webdriver.ChromeOptions()
         OPTIONS.add_argument("--start-maximized")
         OPTIONS.add_argument("--disable-infobars")
@@ -15,6 +17,7 @@ class Connection(object):
                         "profile.default_content_setting_values.notifications": 1 })
 
         print("\nSETUP CONNECTION WITH CHROME BROWSER...")
+
         driver = webdriver.Chrome(chrome_options=OPTIONS)
         driver.get(LOGIN_URL)
 

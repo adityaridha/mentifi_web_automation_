@@ -21,6 +21,7 @@ class Login(BasePage):
 
     def input_password(self, password):
         print("[LOGIN PAGE] input password data : {}".format(password))
+
         self.find_element(self.loc_password).send_keys(password)
 
     def click_login_button(self):

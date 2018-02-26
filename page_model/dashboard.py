@@ -37,6 +37,7 @@ class Dashboard(BasePage):
     loc_goals_and_tasks_expander = (By.XPATH, "//h2[contains(text(), 'Goals & Tasks')]/a")
 
     '''menu'''
+    loc_messages_menu = (By.ID, "21")
 
 
 
@@ -72,7 +73,7 @@ class Dashboard(BasePage):
         assert home.text == "Home"
 
         company_name = self.find_element(self.loc_company_name)
-        print("[DASHBOARD PAGE] Company Name' label, actual value = {}".format(company_name.text))
+        print("[DASHBOARD PAGE] Company Name label, actual value = {}".format(company_name.text))
         assert company_name.text == "Mentifi"
 
     def verify_mentor_dashboard(self):
@@ -93,6 +94,9 @@ class Dashboard(BasePage):
 
     def click_search_mentor(self):
         self.find_element(self.loc_search_mentor).click()
+
+    def click_messages_menu(self):
+        self.find_element(self.loc_messages_menu).click()
 
 
 
