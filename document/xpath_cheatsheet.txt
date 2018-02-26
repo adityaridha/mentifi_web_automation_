@@ -1,0 +1,3 @@
+
+#relative xpath for finding with specific text
+//span[@class='k-input' and contains(text(),'')]
